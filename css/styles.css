@@ -13,6 +13,10 @@ html {
   box-sizing: inherit;
 }
 
+/* * {
+  border: 1px dashed limegreen;
+} */
+
 body {
   margin: 0;
 
@@ -194,4 +198,99 @@ figure {
 
 .about > p {
   margin: 0;
+}
+
+@media (min-width: 768px) {
+
+  main, footer {
+    margin: 0 0 0 60px;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+
+  .site-logo {
+    width: 44px;
+    height: 44px;
+    z-index: 101;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .site-nav {
+    top: 0;
+    right: none;
+    width: 60px;
+    top: 60px;
+  }
+
+  .site-nav-item {
+    float: none;
+    width: auto;
+    padding: 1em;
+    font-size: 8px;
+    font-weight: 900;
+  }
+
+  .site-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-nav {
+    padding: 1.7em 1em 1em 1em;
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  .footer-nav-item {
+    margin-right: 0.7em;
+  }
+
+  .about {
+    background-color: #000000;
+  }
+
+  .movie-overview {
+    display: block;
+  }
+
+  @media (min-width: 992px) {
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .movie-backdrop {
+      display: none;
+    }
+
+    .movie-poster {
+      display: block;
+    }
+
+    .movie-overview {
+      display: none;
+    }
+
+    .movie:first-child {
+      grid-column: 1 / 4;
+    }
+
+    .movie:first-child .movie-overview {
+      display: block;
+
+    }
+
+    .movie:first-child .movie-backdrop {
+      display: block;
+    }
+
+    .movie:first-child .movie-poster {
+      display: none;
+    }
+  }
+
 }
